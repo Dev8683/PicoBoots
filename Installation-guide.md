@@ -17,3 +17,5 @@ Format your SD card to FAT32 or exFAT. Download the latest Swiss release from [h
 ## 4. Hardware installation
 
 ![Wiring diagram](https://raw.githubusercontent.com/webhdx/PicoBoot/main/assets/Wiring%20diagram.jpg)
+
+❗ Wire length and diameter plays a huge role! Keep the wires as short as possible, 10 cm (~4 inches) is a sweet spot. Anything longer can result in no video issue and don't work reliably. Use high quality 28 AWG cables for data lines and 26 AWG for 3.3V and GND.
