@@ -2,13 +2,20 @@
 
 In most cases this suggests there are issues with your SD card setup. Many people experienced this with SD2SP2 adapters which are very often terrible quality. I suggest trying different SD2SP2 adapter, preferably sideloading one (so called "GB Player compatible") which are, in my experience, more reliable. Getting one of memory card form factor adapters (SD Gecko, WiiSD) is also a good idea. These adapters pretty much always work. Also this is the adapter you want to get if you are using DOL-101 model.
 
-Starting with [PicoBoot v0.2](https://github.com/webhdx/PicoBoot/releases/tag/v0.2) release you can hold D-Pad Down during boot to see debug output from iplboot. If you see white text on black screen it means PicoBoot is installed correctly and your problem is caused by SD card setup.
+Starting with [PicoBoot v0.2](https://github.com/webhdx/PicoBoot/releases/tag/v0.2) release you can hold D-Pad Down during boot to see debug output from iplboot. You should see similar output as shown below:
 
-![iplboot debug screen](/assets/iplboot_debug_output.png)
+[[/assets/iplboot_debug_output.png]]
+
+```
+Mounted GAMECUBE as sda
+Reading /ipl.dol
+```
+
+This means it properly detected my memory card named GAMECUBE in Memory Card Slot A, which is true because I've used SD Gecko adapter. If you don't see similar message it means your card couldn't be detected, you've used wrong file system (FAT32 is recommended) or there is no `ipl.dol` file on the memory card.
 
 ## The console is running but it doesn't display anything on the screen
 
-This means PicoBoot probably injected the payload but it was malformed due to interference inducted on the wires. This happens when you've used inappropriate wires for the installation. There is a golden rule: use as short wires as possible. 10 centimeters (~4 inches) is what I'd consider as a maximum recommended length. Anything over that will not work reliably. The type of wire is also very important. Use 28 AWG for data lines and 26 AWG for 3.3V and GND. Don't use thick, inflexible wires because it's very easy to put too much stress on the soldering points and rip some pads or in worst case legs on U10 chips. If that happens it's a game over for your console and it's beyond fixable at that point.
+This means PicoBoot probably injected the payload but it was malformed due to interference introduced through the wires. This happens when you've used inappropriate wires for the installation. There is a golden rule: use as short wires as possible. 10 centimeters (~4 inches) is what I'd consider as a maximum recommended length. Anything over that will not work reliably. The type of wire is also very important. Use 28 AWG for data lines and 26 AWG for 3.3V and GND. Don't use thick, inflexible wires because it's very easy to put too much stress on the soldering points and rip some pads or in worst case legs on U10 chips. If that happens it's a game over for your console and it's beyond fixable at that point. PicoBoot location also plays a huge role in terms of reliability - install it near the fan, it's guaranteed to work in that spot. Another good location is on the disc drive assembly as shown in [Macho Nacho's video](https://www.youtube.com/watch?v=qwL4ZSa0xMo). Any other method i.e. putting it in Serial Port 1 slot is not recommended and you won't be provided with any support if you installed it this way.
 
 ## Power light comes off shortly after hitting the power button
 
