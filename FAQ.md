@@ -1,5 +1,3 @@
-## FAQ
-
 ### Can I use new Pico W board?
 
 It depends. According to the reports it works but the green LED won't light up which may be confusing at first. I haven't tested it personally therfore I can't provide you with any support at this time. It's planned to fully support Pico W and WiFi functionalities in the future.
