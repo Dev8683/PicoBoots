@@ -4,7 +4,7 @@ In most cases this suggests there are issues with your SD card setup. Many peopl
 
 Starting with [PicoBoot v0.2](https://github.com/webhdx/PicoBoot/releases/tag/v0.2) release you can hold D-Pad Down during boot to see debug output from iplboot. If you see white text on black screen it means PicoBoot is installed correctly and your problem is caused by SD card setup.
 
-[[/assets/iplboot_debug_output.png|IPLBoot debug screen]]
+![iplboot debug screen](/assets/iplboot_debug_output.png)
 
 ## The console is running but it doesn't display anything on the screen
 
