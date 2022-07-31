@@ -2,9 +2,13 @@
 
 It depends. According to the reports it works but the green LED won't light up which may be confusing at first. I haven't tested it personally therfore I can't provide you with any support at this time. It's planned to fully support Pico W and WiFi functionalities in the future.
 
-### My console doesn't start - I see a black screen.
+### My console doesn't start at all - I see no video output at all
 
-This indicates problem with wiring. Make sure there are no unintentional shorts near RTC-DOL (U10) IC. It's recommended to use wires as short as possible. The wires can't be too thin, you need at least 26 AWG for 3.3V and GND. Optimal location for PicoBoot is between controller port board and fan assembly. Especially I do not recommend installing PicoBoot in Serial Port 1 slot - it makes wire runs too long and may stop working with future updates! Use only official diagrams, any alternative soldering points and chip locations are not guaranteed to work.
+This indicates wiring issue. Please read [[Installation guide]] and [[Troubleshooting tips]].
+
+### My console goes to vanilla GC menu instead of Swiss
+
+Please read [[Troubleshooting tips]].
 
 ### I don't understand how it's better than XenoGC
 
