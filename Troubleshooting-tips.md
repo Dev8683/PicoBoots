@@ -13,9 +13,16 @@ Reading /ipl.dol
 
 This means it properly detected my memory card named GAMECUBE in Memory Card Slot A, which is true because I've used SD Gecko adapter. If you don't see similar message it means your card couldn't be detected, you've used wrong file system (FAT32 is recommended) or there is no `ipl.dol` file on the memory card.
 
-## The console is running but it doesn't display anything on the screen
+## Orange light is on but it doesn't display anything on the screen
 
-This means PicoBoot probably injected the payload but it was malformed due to interference introduced through the wires. This happens when you've used inappropriate wires for the installation. There is a golden rule: use as short wires as possible. 10 centimeters (~4 inches) is what I'd consider as a maximum recommended length. Anything over that will not work reliably. The type of wire is also very important. Use 28 AWG for data lines and 26 AWG for 3.3V and GND. Don't use thick, inflexible wires because it's very easy to put too much stress on the soldering points and rip some pads or in worst case legs on U10 chips. If that happens it's a game over for your console and it's beyond fixable at that point. PicoBoot location also plays a huge role in terms of reliability - install it near the fan, it's guaranteed to work in that spot. Another good location is on the disc drive assembly as shown in [Macho Nacho's video](https://www.youtube.com/watch?v=qwL4ZSa0xMo). Any other method i.e. putting it in Serial Port 1 slot is not recommended and you won't be provided with any support if you installed it this way.
+First rule out any shorts between adjacent points. It's also common for GP4 and GP6&7 short to the heatsink if you soldered wires over U10 chip.
+
+If you are 100% sure your soldering is okay and there are no shorts, you are probably experiencing interference introduced to data lines because of the wires length. There is a golden rule: use as short wires as possible. 10 centimeters (~4 inches) is what I'd consider as a maximum recommended length. The type of wire is also very important. Use 26-28 AWG stranded wires. Single core or thick wires can easily break or in worst case rip pads from the motherboard if you put too much stress on them. If that happens it's a game over for your console and it's beyond fixable at that point. 
+
+PicoBoot placement also plays a huge role in reliability - install it near the fan, it's guaranteed to work in that spot. Any other placement is not guaranteed to work, especially placing PicoBoot in Serial Port 1 slot as it's confirmed to be unreliable.
+
+#### Other possible solutions:
+- Try different power supply, ref. https://github.com/webhdx/PicoBoot/issues/32
 
 ## Power light comes off shortly after hitting the power button
 
